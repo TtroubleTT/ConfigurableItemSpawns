@@ -22,11 +22,16 @@ public class Plugin : Plugin<Config>
     {
         Singleton = this;
 
+        Exiled.Events.Handlers.Server.WaitingForPlayers += EventHandlers.OnWaitingForPlayers;
+
         base.OnEnabled();
     }
     public override void OnDisabled()
     {
         Singleton = null;
+        
+        Exiled.Events.Handlers.Server.WaitingForPlayers -= EventHandlers.OnWaitingForPlayers;
+
 
         base.OnDisabled();
     }
