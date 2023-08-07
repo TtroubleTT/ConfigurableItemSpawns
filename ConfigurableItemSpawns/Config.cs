@@ -18,9 +18,9 @@ public class Config : IConfig
     public bool Debug { get; set; } = false;
     
     
-    // Credit to common utils for inspiration for config set up
+    // Credit to common utils for inspiration for config set up. Joker a W.
     [Description("List of basegame items to spawn on the map. Each section is the item you want to spawn. Room is the room the item will spawn in. Position is the x, y, z relative position of the item (gotten from the RayCastGun). Chance is the percent chance of it spawning at that position.")]
-    public Dictionary<ItemType, List<ItemSpawns>> ItemSpawns { get; set; } = new()
+    public Dictionary<ItemType, List<ItemSpawns>> ItemSpawnPositions { get; set; } = new()
     {
         {
             ItemType.Coin, new List<ItemSpawns>

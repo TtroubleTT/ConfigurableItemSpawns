@@ -13,9 +13,9 @@ public class ItemSpawns
     
     public Vector3 Position { get; set; }
     
-    public double Chance { get; set; }
+    public float Chance { get; set; }
 
-    public void Deconstruct(out RoomType room, out Vector3 vector3, out double i)
+    public void Deconstruct(out RoomType room, out Vector3 vector3, out float i)
     {
         room = Room;
         vector3 = Position;
