@@ -27,7 +27,7 @@ public class Methods
                 {
                     Log.Debug("Chance check passed... spawning item");
                     Vector3 pos = Methods.RelativeToAbsolute(room, vector3);
-                    Log.Debug($"Item: {item.Key}, Room: {room}, Relative Position: {vector3}, Absolute Position: {pos}");
+                    Log.Debug($"Item: {item.Key}, Room: {room}, Relative Position: {vector3},\nAbsolute Position: {pos}");
                     Pickup.CreateAndSpawn(item.Key, pos, Quaternion.identity);
                 }
             }
